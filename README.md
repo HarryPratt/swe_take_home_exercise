@@ -5,7 +5,7 @@ You are to write a program that accepts numerical calculations in prefix notatio
 You can make the following assumptions:
 
 * The system should support the operators {+, -, *, /} which all take exactly two args.
-* The input literals are nonnegative integers, which simplifies parsing, though internally negative numbers can arise and should be handled.
+* The input literals are positive integers
 * Calculations can be done in the floating-point or integer domain
 * Handling division by zero is unimportant; program can crash or do anything if that arises.
 * You are free to use any programming lanugage of choice.
