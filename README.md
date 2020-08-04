@@ -8,8 +8,9 @@ You can make the following assumptions:
 * The input literals are nonnegative integers, which simplifies parsing, though internally negative numbers can arise and should be handled.
 * Calculations can be done in the floating-point or integer domain
 * Handling division by zero is unimportant; program can crash or do anything if that arises.
+* You are free to use any programming lanugage of choice.
 
-## Sample input (caret prompt for clarity only):
+### Sample input (caret prompt for clarity only):
 ```
 > 3
 3
@@ -28,9 +29,9 @@ You can make the following assumptions:
 ```
 
 ## Additional Bonus #1
-Implement your algorithm but in infix notation with support for full-parenthesized operands. 
+Implement your calculator in infix notation with support for full-parenthesized operands. It's OK want to assume that all the tokens are space-separated, including the parenethesis tokens
 
-Example inputs would be as follows:
+### Sample input (caret prompt for clarity only):
 ```
 > 3
 > ( 1 + 2 )
@@ -40,8 +41,8 @@ Example inputs would be as follows:
 ```
 
 ## Additional Bonus #2
-Create a web-hosted version of your calculator  a RESTful interface for either the prefix or infix versions (or both) of your calculator. The goal would be to be able to interact with a web-hosted version  of your calculator (e.g. a service) via a RESTful API. 
+Create a web-based version of your calculator, as in a service with a RESTful interface. The goal would be to be able to interact with your calculator over the internet vs a standalone desktop based application.
 
 # Deliverables:
 * A GitHub repo with your working code and accompanying test cases
-* You are free to use any programming lanugage of choice.
+
