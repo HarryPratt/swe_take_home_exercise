@@ -9,6 +9,7 @@ Candidate is to write a program that accepts numerical calculations in prefix no
 * It's OK to assume that all the tokens are space-separated, including the paren tokens. 
 
 ## Sample input (caret prompt for clarity only):
+```
 > 3
 3
 > + 1 2
@@ -23,7 +24,7 @@ Candidate is to write a program that accepts numerical calculations in prefix no
 -3
 > / 3 2
 1 (or 1.5)
-
+```
 
 # Goal:
 The goal is to get running code. You're looking for signal about how they approach a coding problem, even more than an algorithmic problem. What do they do when they (inevitably) make a mistake? Do they have good debugging techniques or good ways of preventing errors? Do they document/use invariants? Do they use logging for debugging or use the IDE debugger? Are they hopeless?
