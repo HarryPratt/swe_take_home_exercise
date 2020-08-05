@@ -8,7 +8,7 @@ You can make the following assumptions:
 * The input literals are positive integers
 * Calculations can be done in the floating-point or integer domain
 * Handling division by zero is unimportant; program can crash or do anything if that arises.
-* You are free to use any programming lanugage of choice.
+* You are free to use any programming language of choice.
 
 ### Sample input (caret prompt for clarity only):
 ```
@@ -29,7 +29,7 @@ You can make the following assumptions:
 ```
 
 ## Additional Bonus #1
-Implement your calculator in infix notation with support for full-parenthesized operands. It's OK want to assume that all the tokens are space-separated, including the parenethesis tokens
+Implement your calculator in infix notation with support for full-parenthesized operands. It's OK to assume that all the tokens are space-separated, including the parenethesis tokens
 
 ### Sample input (caret prompt for clarity only):
 ```
