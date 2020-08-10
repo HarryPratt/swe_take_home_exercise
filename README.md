@@ -29,7 +29,7 @@ You can make the following assumptions:
 1 (or 1.5)
 ```
 
-## Part two
+## Part Two
 Implement your calculator in infix notation with support for full-parenthesized operands. It's OK to assume that all the tokens are space-separated, including the parenethesis tokens
 
 ### Sample input (caret prompt for clarity only):
