@@ -45,5 +45,5 @@ Implement your calculator in infix notation with support for full-parenthesized 
 Create a web-based version of your calculator, as in a service with a RESTful interface. The goal would be to be able to interact with your calculator over the internet vs a standalone desktop based application.
 
 # Deliverables:
-* A GitHub repo with your working code for the prefix and infix versions along with accompanying test cases
+A GitHub repo with your working code for the prefix and infix versions along with accompanying test cases
 
