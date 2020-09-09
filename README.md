@@ -1,5 +1,6 @@
-# Prefix Calculator
+# Prefix & Infix Calculator
 
+## Part One
 You are to write a program that accepts numerical calculations in prefix notation, such as + 5 7 or - 12 * 2 6.
 
 You can make the following assumptions:
@@ -33,6 +34,10 @@ You can make the following assumptions:
 Implement your calculator in infix notation with support for full-parenthesized operands.
 
 All assumptions from the previous task hold for this one.
+=======
+## Part Two
+Implement your calculator in infix notation with support for full-parenthesized operands. It's OK to assume that all the tokens are space-separated, including the parenethesis tokens
+
 
 ### Sample input (caret prompt for clarity only):
 ```
@@ -46,9 +51,9 @@ All assumptions from the previous task hold for this one.
 -1 (or -1.8)
 ```
 
-## Additional Bonus #2
+## Additional Bonus
 Create a web-based version of your calculator, as in a service with a RESTful interface. The goal would be to be able to interact with your calculator over the internet vs a standalone desktop based application.
 
 # Deliverables:
-* A GitHub repo with your working code and accompanying test cases
+A GitHub repo with your working code for the prefix and infix versions along with accompanying test cases
 
