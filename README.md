@@ -30,9 +30,6 @@ You can make the following assumptions:
 1 (or 1.5)
 ```
 
-## Additional Bonus #1
-Implement your calculator in infix notation with support for full-parenthesized operands.
-
 All assumptions from the previous task hold for this one.
 =======
 ## Part Two
