@@ -25,7 +25,7 @@ You can make the following assumptions:
 > - / 10 + 1 1 * 1 2
 3
 > - 0 3
-3
+-3
 > / 3 2
 1 (or 1.5)
 ```
@@ -41,7 +41,7 @@ Implement your calculator in infix notation with support for full-parenthesized 
 > ( 1 + 2 )
 3
 > ( 1 + ( 2 * 3 ) )
-4
+7
 > ( ( 1 * 2 ) + 3 )
 5
 > ( ( ( 1 + 1 ) / 10 ) - ( 1 * 2 ) )
