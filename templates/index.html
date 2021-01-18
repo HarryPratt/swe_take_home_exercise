@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculator</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	</head>
+
+	<body align=center>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><legend><h1>Prefix or Infix Calculator</h1></legend></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><h5>Prefix expressions must have outer brackets i.e. ( 1 + 1 ).</h5></div>
+		</div>
+        <div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4"><h5>Single spaces must be between all numbers, operands and brackets for both calculators.</h5></div>
+		</div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form class="form-horizontal" action={{ url_for('result') }}  method="post">
+					<div class="form-group">
+						<label class="control-label col-xs-3" for="inp">Expression:</label>
+						<div class="col-xs-7">
+							<input type="string" class="form-control" name="inp" placeholder="( 1 + 1 )">
+						</div>
+					</div>
+					<div class="form-group">
+            			<div class="col-xs-offset-1 col-xs-9">
+                			<input type="submit" class="btn btn-success" value="Calculate">
+                			<input type="reset" class="btn btn-danger" value="Delete">
+            			</div>
+        			</div>
+        		</form>
+        	</div>
+		</div>
+		<div class="row"></div>
+		<div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><legend><h1>Result</h1></legend></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4"></div>
+        </div>
+		{% if entered %}
+        <form class="form-horizontal">
+			<p id="entered">Input: {{ entered }}</p>
+			<p id="calc">Calculator: {{ calc }}</p>
+			<p id="result">Calculated Result: {{ result }}</p>
+        </form>
+		{% endif %}
+	</body>
+</html>
