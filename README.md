@@ -15,7 +15,7 @@ However, in case of any potential version issues the conda environment can be fo
 
 - The calculator API can be be run locally by running `./calculator_api.py`
 - Once the application is running the user can input calculations via the UI and receive the results
-- The user could also send a post request to `http://127.0.0.1:5000/result_json` with inp as the calculation expression
+- The user could also send a post request to `http://127.0.0.1:5000/result_json` with inp as the calculation expression.
 For example:
 ```
 import requests
