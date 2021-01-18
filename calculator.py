@@ -10,7 +10,7 @@ test_cases = [
     # Prefix calculator
     '3', '+ 1 2', '+ 1 * 2 3', '+ * 1 2 3', '- / 10 + 1 1 * 1 2', '- 0 3', '/ 3 2'
     # Infix calculator
-    , '( 1 + 2 )', '( 1 + ( 2 * 3 ) )', '( ( 1 * 2 ) + 3 )', '( ( ( 1 + 1 ) / 10 ) - ( 1 * 2 ) )'
+    , '  ( 1 + 2 )', '( 1 + ( 2 * 3 ) )', '( ( 1 * 2 ) + 3 )', '( ( ( 1 + 1 ) / 10 ) - ( 1 * 2 ) )'
 ]
 
 
@@ -31,10 +31,10 @@ def prefix_calcuator(input: str):
                 # Add the result to the front of the number queue
                 numbers.appendleft(operators[value](n1, n2))
             else:
-                raise ValueError('Invalid operator, operands or expression entered')
+                return ValueError('Invalid operator, operands or expression entered')
     # For accidental cases such as '+ 4 5 5' which would otherwise return 9
     if len(numbers) > 1:
-        raise ValueError('Not enough operators were given')
+        return ValueError('Not enough operators were given')
     return numbers[0]
 
 
@@ -61,10 +61,10 @@ def infix_calcuator(input: str):
             # Add number to the front of the number queue when found
             numbers.append(float(value))
         else:
-            raise ValueError('Invalid operator, operand or expression entered')
+            return ValueError('Invalid operator, operand or expression entered')
     # Likely caught before hand but just in case
     if len(numbers) > 1:
-        raise ValueError('Not enough operators were given')
+        return ValueError('Not enough operators were given')
     return numbers[0]
 
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     print("Running for test cases...")
     for test_case in test_cases:
         output = get_result(test_case)
-        print(f'Input: {test_case}, Result: {output["result"]}, Calculator: {output["calc"]}')
+        print(f'Input: {test_case}, Output: {output["calc"]}, Result: {output["result"]}')
     print()
     print('Note: ')
     print('     Prefix expressions must have outer brackets i.e. ( 1 + 1 ).')
@@ -94,6 +94,6 @@ if __name__ == "__main__":
         if new_case == "":
             break
         output = get_result(new_case)
-        print(f'Input: {new_case}, Calculator: {output["calc"]}, Calculated Result: {output["result"]}')
+        print(f'Input: {new_case}, Calculator: {output["calc"]}, Output: {output["result"]}')
         print()
 
