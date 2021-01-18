@@ -13,13 +13,7 @@ def welcome():
 
 @app.route('/result_json', methods=['POST'])
 def result_json():
-    """If we want to do a post request and receive the result in json format
-    Example
-    import requests
-    r = requests.post("http://127.0.0.1:5000/result_json", data={'inp': '+ * 1 2 5'})
-    print r.text '{\n  "calc": "prefix", \n  "result": 7.0\n}\n'
-    print r.status_code 200
-    """
+    # If we want to do a post request and receive the result in json format
     inp = request.form.get("inp", type=str)
     response = get_result(inp)
     return response

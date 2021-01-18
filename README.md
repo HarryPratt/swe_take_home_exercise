@@ -1,56 +1,29 @@
-# Prefix & Infix Calculator
+# Prefix & Infix Calculator and API
 
-## Part One
-You are to write a program that accepts numerical calculations in prefix notation, such as + 5 7 or - 12 * 2 6.
+This repo contains my solutions to: https://github.com/Kheiron-Medical/swe_take_home_exercise
 
-You can make the following assumptions:
+The solutions were completed using very few imported libraries. 
+However, in case of any potential version issues the conda environment can be found in `environment.yaml`
 
-* The system should support the operators {+, -, *, /} which all take exactly two args.
-* The input literals are positive integers
-* Calculations can be done in the floating-point or integer domain
-* Handling division by zero is unimportant; program can crash or do anything if that arises.
-* You don't need to consider operator presidence
-* You are free to use any programming language of choice but please provide any requirements to run the code EG: Python version or Pip dependencies
+# Part 1 and 2
+- The prefix and infix calculator can be run using `./calculator.py`
+- Description of code implementation is given in the comments of the respective functions
+- The calculator runs all given tests cases before asking for a new expression
 
-### Sample input (caret prompt for clarity only):
+# Bonus
+
+- The calculator API can be be run locally by running `./calculator_api.py`
+- Once the application is running the user can input calculations via the UI and receive the results
+- The user could also send a post request to `http://127.0.0.1:5000/result_json` with inp as the calculation expression
+For example:
 ```
-> 3
-3
-> + 1 2
-3
-> + 1 * 2 3
-7
-> + * 1 2 3
-5
-> - / 10 + 1 1 * 1 2
-3
-> - 0 3
--3
-> / 3 2
-1 (or 1.5)
+import requests
+r = requests.post("http://127.0.0.1:5000/result_json", data={'inp': '+ * 1 2 5'})
+print r.text 
+print r.status_code
 ```
-
-All assumptions from the previous task hold for this one.
-=======
-## Part Two
-Implement your calculator in infix notation with support for full-parenthesized operands. It's OK to assume that all the tokens are space-separated, including the parenethesis tokens
-
-
-### Sample input (caret prompt for clarity only):
+Would return:
 ```
-> ( 1 + 2 )
-3
-> ( 1 + ( 2 * 3 ) )
-7
-> ( ( 1 * 2 ) + 3 )
-5
-> ( ( ( 1 + 1 ) / 10 ) - ( 1 * 2 ) )
--1 (or -1.8)
+'{\n  "calc": "prefix", \n  "result": 7.0\n}\n'
+200
 ```
-
-## Additional Bonus
-Create a web-based version of your calculator, as in a service with a RESTful interface. The goal would be to be able to interact with your calculator over the internet vs a standalone desktop based application.
-
-# Deliverables:
-A GitHub repo with your working code for the prefix and infix versions along with accompanying test cases
-
