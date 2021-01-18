@@ -8,7 +8,8 @@ However, in case of any potential version issues the conda environment can be fo
 # Part 1 and 2
 - The prefix and infix calculator can be run using `./calculator.py`
 - Description of code implementation is given in the comments of the respective functions
-- The calculator runs all given tests cases before asking for a new expression
+- The calculator runs all given tests cases before asking for new expressions
+- The calculator will keep asking for new expressions until you press enter to finish (an empty expression)
 
 # Bonus
 
@@ -19,8 +20,8 @@ For example:
 ```
 import requests
 r = requests.post("http://127.0.0.1:5000/result_json", data={'inp': '+ * 1 2 5'})
-print r.text 
-print r.status_code
+r.text 
+r.status_code
 ```
 Would return:
 ```
