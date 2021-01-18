@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import collections
 from operator import add, sub, mul, truediv
 
@@ -87,9 +89,11 @@ if __name__ == "__main__":
     print('     Prefix expressions must have outer brackets i.e. ( 1 + 1 ).')
     print('     Single spaces must be between all numbers, operators and brackets for both calculators.')
     print()
-    new_case = input("Enter new expression:  ")
-    print()
-    print()
-    output = get_result(new_case)
-    print(f'Input: {new_case}, Result: {output["result"]}, Calculator: {output["calc"]}')
+    while True:
+        new_case = input("Enter new expression:  ")
+        if new_case == "":
+            break
+        output = get_result(new_case)
+        print(f'Input: {new_case}, Calculator: {output["calc"]}, Calculated Result: {output["result"]}')
+        print()
 
