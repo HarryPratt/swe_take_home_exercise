@@ -36,6 +36,7 @@
         		</form>
         	</div>
 		</div>
+		{% if entered %}
 		<div class="row"></div>
 		<div class="row">
             <div class="col-md-4"></div>
@@ -43,7 +44,6 @@
             <div class="col-md-4"></div>
             <div class="col-md-4"></div>
         </div>
-		{% if entered %}
         <form class="form-horizontal">
 			<p id="entered">Input: {{ entered }}</p>
 			<p id="calc">Calculator: {{ calc }}</p>

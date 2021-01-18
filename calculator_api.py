@@ -23,7 +23,7 @@ def result_json():
 
 @app.route('/result', methods=['POST'])
 def result():
-    # Update the index page with the output
+    # Update the index template with the output
     inp = request.form.get("inp", type=str)
     response = get_result(inp)
     return render_template('index.html', entered=inp, result=response["result"], calc=response["calc"])

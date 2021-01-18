@@ -39,14 +39,14 @@ def prefix_calcuator(input: str):
 
 
 def infix_calcuator(input: str):
-    # Remove spaces to extract numbers, operators and brackets in a list
+    # Remove spaces to extract numbers, operators and parenthesis in a list
     filter_input = input.split(' ')
     # These queues will track which operators and numbers we have traversed for later computation
     numbers = collections.deque()
     operators_track = collections.deque()
     for value in filter_input:
         if value == '(':
-            # Ignore forward brackets as they do not tell us anything of interest
+            # Ignore forward parenthesis as they do not tell us anything of interest
             continue
         elif value == ')':
             # If a close bracket is found then calculate the value from the most recent operator and two numbers
@@ -62,9 +62,13 @@ def infix_calcuator(input: str):
             numbers.append(float(value))
         else:
             return ValueError('Invalid operator, operand or expression entered')
-    # Likely caught before hand but just in case
+
+    # For cases where more parenthesis need to be added like ( 1 / ( 1 - 10 ) - ( 1 * 2 ) )
+    if len(numbers) > 1 and len(operators) > 1:
+        return ValueError('Not assuming BODMAS please use enough parenthesis')
+    # For cases where parenthesis are wrong like ( ( ( 1 / ( 1 - 10 ) - ( 1 * 2 ) )
     if len(numbers) > 1:
-        return ValueError('Not enough operators were given')
+        return ValueError('Not enough operators or parenthesis were given')
     return numbers[0]
 
 
@@ -86,8 +90,8 @@ if __name__ == "__main__":
         print(f'Input: {test_case}, Output: {output["calc"]}, Result: {output["result"]}')
     print()
     print('Note: ')
-    print('     Prefix expressions must have outer brackets i.e. ( 1 + 1 ).')
-    print('     Single spaces must be between all numbers, operators and brackets for both calculators.')
+    print('     Prefix expressions must have outer parenthesis i.e. ( 1 + 1 ).')
+    print('     Single spaces must be between all numbers, operators and parenthesis for both calculators.')
     print()
     while True:
         new_case = input("Enter new expression:  ")
